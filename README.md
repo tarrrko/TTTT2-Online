@@ -17,7 +17,7 @@ rollback online play.**
 
 ### An app that gets out of your way
 
-- A clean, modern app with everything one click away: **Ranked, Casual, Lobby, Practice, Controls and Settings**.
+- A clean, modern app with everything one click away: **Ranked, Casual, Lobby, Practice, Customize, Replays, Leaderboard, Controls and Settings**.
 - The whole app works with a controller. It shows the right button icons for Xbox, PlayStation and Switch controllers.
 - Several accounts on one PC, each with its own team, side, controls and match history.
 - Your team stands under its cards in the costumes you picked, and your fighter can be your account photo.
@@ -27,9 +27,11 @@ rollback online play.**
 
 - **GGPO rollback netcode**, with an automatic input delay of 1 to 2 frames.
 - **Ranked:** search for a player near your rank. Every fighter has its own rank, from Beginner to True Tekken God.
+- **Account and leaderboard:** the app needs a free account. Ranks are kept on the project's server, and a result counts when both players report it.
 - **Casual:** search for anyone, with no effect on your ranks.
 - **Lobby:** play a friend with a 6-letter code. No IP addresses to type or share.
 - **Rematch without leaving the game:** the next fight is ready in about 10 seconds.
+- **Your own result:** each player gets their own YOU WIN or YOU LOSE, with its voice. In Ranked, a line of rank boxes for each of your two fighters moves by the points won or lost.
 - A live display of ping, input delay and rollbacks, which also shows whose PC is struggling.
 - Your win streak against an opponent, shown in the game's own WINS display.
 
@@ -49,6 +51,9 @@ rollback online play.**
   Dr. Bosconovitch and Unknown are already on the disc. The game used to unlock them over Xbox Live. The app does that step
   itself, with no game data and no download.
 - **Practice starts straight in the game**, with an input history and your choice of side.
+- **A training menu on START**, with save position (Select + RT), back to it (Select + LT), restart at a wall, switch sides, a recordable training partner, Throw Break Training, and panels for damage, combos, startup, frame advantage, whiff recovery, status and distance.
+- **Customize** any fighter, with every item unlocked and 999,999,999 G on any save. The photo you take in the game becomes the custom's picture in the app.
+- **Replays:** every online match is kept on your PC. Pick a round, pause, rewind, or take over either player for 10 seconds.
 - **Full control:** remap any controller, or use the keyboard with its presets.
 
 ## What you need
@@ -71,23 +76,24 @@ responsibility.
 
 ## Known limits
 
-- There is no leaderboard yet.
-- Ranks are stored on each player's own PC, so treat them as a guide.
 - Matchmaking uses free public relay services, so it can go down without warning.
 - Matches connect directly between two PCs. Some internet providers and routers do not allow that, so some pairs of players cannot
   connect.
 - A rare crash can still happen at about 100 ms ping.
-- Lobbies are for two players for now. Saved custom costumes and Customize mode are not available.
+- Lobbies are for two players for now. Custom costumes show in Practice but not in online matches.
 
 ## Privacy
 
 **Who is responsible:** the maintainer of this project. Contact: tttt2online@proton.me
 
-This project has no server and no accounts on the internet, and nothing is sent to this project. Your accounts, ranks, settings and
-match history stay on your PC.
+Your settings and match history stay on your PC. The project's server is used only for your online account, which the app needs
+to play, for ranks and for the leaderboard.
 
 | What | Who gets it | Why |
 |---|---|---|
+| Your account name, a scrambled form of your password, your photo choice, ranks, wins and losses | The project's server, run on Cloudflare | Ranks that can't be faked, and the public leaderboard, which shows all of these except the password. Your password itself never leaves your PC |
+| Your ranked results | The project's server, for 2 days | Both players' reports are compared before a result counts |
+| Your IP address | The project's server, while you use it | As with any website. It is not kept |
 | Your IP address and port | The opponent you are matched with | The two PCs connect directly to play |
 | Your IP address | The relay services `broker.emqx.io` and `broker.hivemq.com` | The apps meet there. What they send there is encrypted |
 | Your IP address | `api.ipify.org` | It tells the app your public address |
@@ -100,8 +106,8 @@ match history stay on your PC.
 **How long:** the app keeps the logs of your last 15 games on your PC, and deletes logs received from an opponent after 14 days. The
 relay services, `api.ipify.org` and GitHub have their own policies, and some of them are outside your country.
 
-**Your rights:** you can ask about, correct or delete data we hold, object, and complain to your data protection authority. We hold
-nothing about you ourselves. You can delete everything on your PC by deleting the app's folder. You can play Practice offline.
+**Your rights:** you can ask about, correct or delete data we hold, object, and complain to your data protection authority. Write to
+the address above to have an online account deleted. You can delete everything on your PC by deleting the app's folder.
 
 ## Legal
 
